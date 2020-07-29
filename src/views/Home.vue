@@ -2,7 +2,7 @@
   <div id="home">
     <img
       alt="Vue logo"
-      src="../assets/logo.png"
+      src="@/assets/logo.png"
       valign="top"
     >
     <h1>Welcome to Jon's Vue App!</h1>
@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 export default {
   name: "Home"
 };

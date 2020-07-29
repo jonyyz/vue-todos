@@ -1,12 +1,12 @@
 <template>
   <div>
     <Header />
-    <ErrorMessage
+    <error-message
       v-if="errorMessage"
       :message="errorMessage"
     />
-    <AddTodoListItem @add-todo-list-item="addTodoListItem" />
-    <TodoList
+    <add-todo-list-item @add-todo-list-item="addTodoListItem" />
+    <todo-list
       :items="items"
       @delete-item="deleteTodoListItem"
       @complete-item="completeTodoListItem"
@@ -15,13 +15,12 @@
 </template>
 
 <script>
-// import { range } from "lodash";
 import axios from "axios";
 
-import Header from "../components/layout/Header";
-import ErrorMessage from "../components/ErrorMessage";
-import TodoList from "../components/TodoList";
-import AddTodoListItem from "../components/AddTodoListItem";
+import Header from "@/components/layout/Header";
+import ErrorMessage from "@/components/ErrorMessage";
+import TodoList from "@/components/TodoList";
+import AddTodoListItem from "@/components/AddTodoListItem";
 
 export default {
   name: "App",
@@ -29,11 +28,6 @@ export default {
   data: () => ({
     errorMessage: "",
     items: []
-    // items: range(1, 4).map(id => ({
-    //   id,
-    //   title: `Item ${id}`,
-    //   completed: id % 2 === 0
-    // }))
   }),
   async created() {
     try {

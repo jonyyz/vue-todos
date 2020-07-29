@@ -7,6 +7,12 @@
       <router-link to="/todo-list">
         TODO List
       </router-link>
+      <router-link to="/sandbox">
+        Sandbox
+      </router-link>
+      <router-link to="/popperjs">
+        Popper JS Sandbox
+      </router-link>
     </div>
     <router-view />
   </div>
